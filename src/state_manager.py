@@ -30,7 +30,12 @@ class GlobalStateManager:
 
             if 0 < self.max_failure <= self.failure_count:
                 self._should_stop = True
-                logger.info("max failure reached, stop running")
+                logger.warning("max failure reached, stop running")
+
+    def stop_with_message(self, message):
+        with self.lock:
+            self._should_stop = True
+            logger.warning(message)
 
     def should_stop(self):
 

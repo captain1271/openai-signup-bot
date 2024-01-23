@@ -141,6 +141,7 @@ def verify_email(sm):
             check_mail()
             time.sleep(10)
     finally:
+        sm.stop_with_message("email worker stopped pls check your network or email account and password")
         mail.logout()
 
 
