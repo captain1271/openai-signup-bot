@@ -52,8 +52,8 @@ pip install -r requirements.txt
 - `cfSolverProxy`:
   必填。过cf时用的代理。格式和要求参考[文档](https://yescaptcha.atlassian.net/wiki/spaces/YESCAPTCHA/pages/86409217/CloudFlareTask+CloudFlare5)
   我在调试脚本的时候用的是[okeyproxy](https://www.okeyproxy.com?ref=y6lg9s)。
-- maxSuccessAccounts: 选填，最多注册成功的账号数，达到此数量脚本会自动停止，-1表示无限制。
-- maxFailureAccounts: 选填，最多注册失败的账号数，达到此数量脚本会自动停止，-1表示无限制。我建议你最好限制一下。
+- `maxSuccessAccounts`: 选填，最多注册成功的账号数，达到此数量脚本会自动停止，-1表示无限制。
+- `maxFailureAccounts`: 选填，最多注册失败的账号数，达到此数量脚本会自动停止，-1表示无限制。我建议你最好限制一下。
 
 4. 运行
 
