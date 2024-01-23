@@ -1,0 +1,5 @@
+.idea/
+*.iml
+data/
+config/config.json
+data/*.txt

@@ -1,0 +1,15 @@
+{
+  "domain": "",
+  "proxy": "",
+  "emailWorkerNum": 5,
+  "signupWorkerNum": 5,
+  "emailAddr": "",
+  "emailPassword": "",
+  "emailImapServer": "",
+  "emailImapPort": "",
+  "capsolverKey": "",
+  "yesClientKey": "",
+  "cfSolverProxy": "",
+  "maxSuccessAccounts": "10",
+  "maxFailureAccounts": "10"
+}

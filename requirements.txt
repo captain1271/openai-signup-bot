@@ -1,0 +1,5 @@
+cffi==1.16.0
+curl-cffi==0.5.10
+func-timeout==4.3.5
+loguru==0.7.2
+pycparser==2.21
