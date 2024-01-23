@@ -69,7 +69,7 @@ class Capsolver(ArkoseSolver):
                 logger.debug(f"{task_id} waiting for arkose token status: {status}")
 
                 task = self.session.post(url, json={
-                    "clientKey": "CAP-569BBC9FD5F22A478D466A01D3357C25",
+                    "clientKey": capsolver_key,
                     "taskId": task_id
                 })
 
