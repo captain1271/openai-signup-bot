@@ -91,7 +91,9 @@ def verify_email(sm):
     try:
         mail.login(username, password)
     except Exception as e:
-        pass
+        sm.stop_with_message("email worker stopped pls check your network or email account and password")
+
+        raise e
 
     logger.debug("start to monitor openai verify email")
 
@@ -116,7 +118,7 @@ def verify_email(sm):
 
     def check_mail():
         mail.select('INBOX')
-        status, messages = mail.search(None, '(UNSEEN)')
+        status, messages = mail.search(None, '(UNSEEN FROM "noreply@tm.openai.com")')
         messages = messages[0].split()
 
         for mail_id in messages:
