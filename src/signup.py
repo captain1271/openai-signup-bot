@@ -9,7 +9,7 @@ from curl_cffi import requests, CurlHttpVersion
 from func_timeout import func_timeout
 
 from arkose_solver import Capsolver
-from config import proxy
+from config import proxy, domain
 from log import logger, log_context
 from pool_manager import ThreadPoolManager
 
@@ -137,7 +137,7 @@ class Signup:
         for i in range(retry):
             try:
                 identifier = ''.join(
-                    [secrets.choice(string.ascii_letters + string.digits) for _ in range(12)]) + "@madoka.free.hr"
+                    [secrets.choice(string.ascii_letters + string.digits) for _ in range(12)]) + "@" + domain
                 password = ''.join(
                     [secrets.choice(string.ascii_letters + string.digits + string.punctuation) for _ in range(15)])
 
