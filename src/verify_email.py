@@ -46,7 +46,7 @@ def _click_verify_link(link):
     while True:
         task_url = 'https://api.yescaptcha.com/getTaskResult'
         resp = client.post(task_url,
-                           json={"clientKey": "11e46d86e772375d911abe236cf5efc7f752c72031275", "taskId": task_id})
+                           json={"clientKey": yes_client_key, "taskId": task_id})
         resp_json = resp.json()
         if resp_json["status"] == "processing":
             time.sleep(5)
